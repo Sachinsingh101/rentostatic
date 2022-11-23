@@ -31,7 +31,7 @@ function Navbar(){
                      </ul>
                    </li>
                    <li class="nav-item">
-                     <Link to='/admin/workground' class="nav-link text-white">Admin</Link>
+                     <Link to='/admin/workground/actions' class="nav-link text-white">Admin</Link>
                    </li>
                  </ul>
                  <span className='me-2'><Link to="/Signup"  className="text-white text-decoration-none">Signup</Link></span>|<span className="ms-2"><Link to="/Signin" className="text-white text-decoration-none">Signin</Link></span>

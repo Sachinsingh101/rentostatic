@@ -24,7 +24,6 @@ function App() {
       <Route path='/search/:id' element={<Specificsearch/>} />
       <Route path='/view/:id' element={<View/>} />
       <Route path='/aboutUs' element={<About/>}/>
-      <Route path='/admin/workground' element={<Action/>} />
       <Route path='/admin/workground/actions' element={<Action/>} />
       <Route path='/admin/workgroud/recents' element={<Recent/>} />
     </Routes>

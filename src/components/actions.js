@@ -77,6 +77,7 @@ function Action(){
       },[])
 
     function deleteHandler(e){
+        e.preventDefault();
         try{
             const id=e.target.name;
             console.log(id);
