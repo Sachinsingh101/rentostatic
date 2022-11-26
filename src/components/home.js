@@ -89,7 +89,7 @@ function Home(){
                data.items.length>0?
                data.items.reverse().map((value,i)=>{
                 return <div className='col-md-3 shadow mt-3 mb-3'>
-                <img alt="Rento.com" src={`https://rento-com.onrender.com/public/${value.image}`} style={{width:"100%",height:'30vh'}}></img>
+                <img alt={value.imgurl} src={`${value.imgurl}`} style={{width:"100%",height:'30vh'}}></img>
                 <p>{value.housename}</p>
                 <p>{value.houseaddress}</p>
                 <p>{value.state}</p>

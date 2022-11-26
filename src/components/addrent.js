@@ -7,7 +7,7 @@ function Rent(){
     try{
       const token=localStorage.getItem("token");
        axios({
-        url:'https://rento-com.onrender.com/rent',
+        url:'http://localhost:5000/rent',
         method:'get',
         headers:{
            "Content-Type":"application/json",
@@ -40,7 +40,7 @@ function Rent(){
         state:"",
         pincode:"",
         type:"",
-        image:null
+        image:null,
     })
 
     function changeHandler1(e){sethome({...home,housename:e.target.value})}
@@ -51,21 +51,22 @@ function Rent(){
     function changeHandler6(e){sethome({...home,type:e.target.value})}
     function changeHandler7(e){sethome({...home,image:e.target.files[0]})}
     
+    
 
 
     function submitHandler(e){
         e.preventDefault();
         const formdata=new FormData();
+        formdata.append('image',home.image)
         formdata.append('housename',home.housename)
         formdata.append('houseaddress',home.houseaddress)
         formdata.append('country',home.country)
         formdata.append('state',home.state)
         formdata.append('pincode',home.pincode)
         formdata.append('type',home.type)
-        formdata.append('image',home.image)
         try{
-            axios.post('https://rento-com.onrender.com/renthome',formdata);
-            console.log("home added successfully");
+          axios.post('http://localhost:5000/renthome',formdata);
+          console.log("home added successfully");
         }catch(err){
             console.log("error while adding renthome",err);
         }
