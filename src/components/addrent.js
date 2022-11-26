@@ -65,7 +65,7 @@ function Rent(){
         formdata.append('pincode',home.pincode)
         formdata.append('type',home.type)
         try{
-          axios.post('http://localhost:5000/renthome',formdata);
+          axios.post('https://rento-com.onrender.com/renthome',formdata);
           console.log("home added successfully");
         }catch(err){
             console.log("error while adding renthome",err);
