@@ -7,7 +7,7 @@ function Rent(){
     try{
       const token=localStorage.getItem("token");
        axios({
-        url:'http://localhost:5000/rent',
+        url:'https://rento-com.onrender.com/rent',
         method:'get',
         headers:{
            "Content-Type":"application/json",
