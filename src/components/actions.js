@@ -81,7 +81,7 @@ function Action(){
         try{
             const id=e.target.name;
             console.log(id);
-            axios.delete(`https://rento-com.onrender.com/delete/${id}`);
+            axios.delete(`http://localhost:5000/delete/${id}`);
             alert("deleted successfully");
         }
         catch{
