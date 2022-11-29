@@ -66,7 +66,8 @@ function Rent(){
         formdata.append('type',home.type)
         try{
           axios.post('https://rento-com.onrender.com/renthome',formdata);
-          console.log("home added successfully");
+          alert("added to rent successfully !!");
+          navigate('/');
         }catch(err){
             console.log("error while adding renthome",err);
         }
@@ -98,7 +99,7 @@ function Rent(){
                             <option>Other</option>
                         </select>
                         <label for="house" className="mt-3">Apartment/Room Photo</label>
-                        <input required accept='image/jpeg image/png image/jpg' type="file" name="image" className="form-control" placeholder="Enter Apartment/Room actual Photo" onChange={changeHandler7}></input>
+                        <input required accept="image/jpg, image/png , image/jpeg" type="file" name="image" className="form-control" placeholder="Enter Apartment/Room actual Photo" onChange={changeHandler7}></input>
                         <input type="submit" value="submit" className='form-control btn btn-success mt-3'></input>
                     </form>
                 </div>
