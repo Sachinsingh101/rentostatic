@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {useState} from 'react'
-import {useForm} from 'react-hook-form'
+import {useNavigate} from 'react-router-dom'
 
 function Signup(){
     const [user,setuser]=useState({
@@ -8,7 +8,7 @@ function Signup(){
         email:"",
         phone:""
     })
-    const {register,handleSubmit}=useForm();
+    const navigate=useNavigate();
     function changeHandler1(e){
         setuser({
             ...user,name:e.target.value
@@ -33,10 +33,11 @@ function Signup(){
             axios.post('https://rento-com.onrender.com/Signup',userdata).then(res=>{
                 const resdata=res.data;
                 if(resdata==='user already exist'){
-                    alert("Email already exist !!")
-                    console.log(resdata);
+                    alert("Email already exist !!");
                 }else{
                     localStorage.setItem('token',resdata);
+                    alert("Signup successfull !!");
+                    navigate('/');
                 }
             });
         }catch{

@@ -1,7 +1,7 @@
 
 import {useState} from 'react'
 import axios  from 'axios';
-
+import {useNavigate}  from 'react-router-dom'
 
 
 
@@ -10,6 +10,7 @@ function Signin(){
         name:"",
         email:""
     })
+    const navigate=useNavigate();
     function changeHandler1(e){
         setdata({
             ...data,name:e.target.value
@@ -28,10 +29,15 @@ function Signin(){
         }
         try{
             axios.post('https://rento-com.onrender.com/login',userdata).then(res=>{
-                const token=res.data;
-                localStorage.setItem('token',token)
+                if(res.data!='user not found'){
+                    const token=res.data;
+                    localStorage.setItem('token',token);
+                    alert("SignIn successfull");
+                    navigate('/');
+                }else{
+                    alert("user not found");
+                }
             });
-            console.log("user logged in successfully");
         }catch(err){
             console.log("error while login user",err);
         }

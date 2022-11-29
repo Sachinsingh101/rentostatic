@@ -3,3 +3,9 @@
     transition-duration: 1s;
     transition-timing-function:ease-in-out;
 }
+.addrent{
+    background:white;
+}
+.addrentform{
+    background:rgba(12, 12, 12, 0.897);
+}

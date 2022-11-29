@@ -50,6 +50,7 @@ function Specificsearch(){
              
             <div className="row justify-content-center">
               <div className="col-md-7 col-11">
+                <h3 className="text-center text-muted">Search for your next Destination</h3>
               <form className="d-flex bg-primary p-2" onSubmit={serachHandler}>
                <input type="search" value={data.value} className="form-control" placeholder="Search by state,city,pincode.." onChange={changeHandler3}></input>
                <input type="submit" className="btn btn-primary" value="Submit"></input>

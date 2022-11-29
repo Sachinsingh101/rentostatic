@@ -1,12 +1,10 @@
 
 import axios from "axios";
-import {useParams , Link} from 'react-router-dom'
+import {useParams , Link , useNavigate} from 'react-router-dom'
 import {useEffect,useState} from 'react'
-import {useNavigate} from 'react-router-dom'
 import Loader from "./loader";
 
 function View(){
-    const navigate=useNavigate();
     useEffect(function(){
       try{
         const token=localStorage.getItem("token");
@@ -38,6 +36,7 @@ function View(){
     })
     const param=useParams();
     const id=param.id;
+    const navigate=useNavigate();
     useEffect(()=>{
         try{
             axios.get(`https://rento-com.onrender.com/view/${id}`).then(res=>{
@@ -59,11 +58,11 @@ function View(){
         }
         try{
             axios.post('https://rento-com.onrender.com/apply',applydata);
-            console.log("applied successfully");
+            alert("thanku We will contact you soon..");
         }catch(err){
             console.log("error while applying" ,err);
+            alert("Server busy try again !!");
         }
-        
     }
 
     return(

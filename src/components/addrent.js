@@ -75,21 +75,21 @@ function Rent(){
 
     return(
         <>
-         <div className="container mt-5 mb-5">
+         <div className="container-fluid addrent">
             <div className="row">
-                <div className="col-md-7 col-12 m-auto">
-                    <form className="p-5 bg-dark text-white" encType='multipart/form-data' onSubmit={submitHandler}>
+                <div className="col-md-7 col-12 m-auto p-5">
+                    <form className="addrentform p-5 mt-3 mb-5 shadow-lg  text-white" encType='multipart/form-data' onSubmit={submitHandler}>
                         <h3 className="text-center">Sell/Rent Your home</h3>
                         <label for="house">Apartment Name</label>
-                        <input type="text" id="house" className="form-control" placeholder="Enter Apartment name" onChange={changeHandler1}></input>
+                        <input type="text" id="house" className="form-control" placeholder="Enter Apartment name" onChange={changeHandler1} required></input>
                         <label for="address" className="mt-3">Apartment Address</label>
-                        <input type="text" id="address" className="form-control" placeholder="Enter Apartment Address" onChange={changeHandler2}></input>
+                        <input type="text" id="address" className="form-control" placeholder="Enter Apartment Address" onChange={changeHandler2} required></input>
                         <label for="country" className="mt-3">Country of Origin</label>
                         <input type="text" id="country" className="form-control" placeholder="Enter Country name" disabled value="India" onChange={changeHandler3}></input>
                         <label for="state" className="mt-3">State</label>
-                        <input type="text" id="state" className="form-control" placeholder="Enter Your state" onChange={changeHandler4}></input>
+                        <input type="text" id="state" className="form-control" placeholder="Enter Your state" onChange={changeHandler4} required></input>
                         <label for="pincode" className="mt-3">Pincode</label>
-                        <input type="text" id="pincode" className="form-control" placeholder="Enter Your pincode" onChange={changeHandler5}></input>
+                        <input type="text" id="pincode" className="form-control" placeholder="Enter Your pincode" onChange={changeHandler5} required></input>
                         <label for="house" className="mt-3">Rent type</label>
                         <select className="form-select" onChange={changeHandler6}>
                             <option selected>Room</option>
@@ -98,7 +98,7 @@ function Rent(){
                             <option>Other</option>
                         </select>
                         <label for="house" className="mt-3">Apartment/Room Photo</label>
-                        <input type="file" name="image" className="form-control" placeholder="Enter Apartment/Room actual Photo" onChange={changeHandler7}></input>
+                        <input required accept='image/jpeg image/png image/jpg' type="file" name="image" className="form-control" placeholder="Enter Apartment/Room actual Photo" onChange={changeHandler7}></input>
                         <input type="submit" value="submit" className='form-control btn btn-success mt-3'></input>
                     </form>
                 </div>

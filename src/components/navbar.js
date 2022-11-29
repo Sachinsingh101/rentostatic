@@ -20,14 +20,14 @@ function Navbar(){
                      <a class="nav-link text-white" ><Link to="/aboutus" className='text-decoration-none text-white'>About</Link></a>
                    </li>
                    <li class="nav-item dropdown">
-                     <a disabled class="nav-link dropdown-toggle text-white"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <a  class="nav-link dropdown-toggle text-white"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        Services
                      </a>
-                     <ul class="dropdown-menu bg-white">
-                       <li><a class="dropdown-item text-dark" href="#homes">Book your home now</a></li>
-                       <li><a class="dropdown-item text-dark" >24*7 help</a></li>
-                       <li><hr class="dropdown-divider dark" /></li>
-                       <li><a class="dropdown-item text-white" >Pay advance</a></li>
+                     <ul class="dropdown-menu bg-dark">
+                       <li><Link to='/search/demo text' class="dropdown-item text-danger" href="#homes">Book your home now</Link></li>
+                       <li><Link to='Sell/Rent' class="dropdown-item text-danger" >List your property on Rento</Link></li>
+                       {/* <li><hr class="dropdown-divider dark" /></li>
+                       <li><a class="dropdown-item text-white" >Pay advance</a></li> */}
                      </ul>
                    </li>
                    <li class="nav-item">

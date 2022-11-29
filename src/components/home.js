@@ -100,6 +100,13 @@ function Home(){
               }
             </div>
           </div>
+          <div className='container mb-3'>
+            <div className='row align-items-center'>
+              <div className='col m-auto text-center'>
+                <Link className='text-decoration-none' to='/search/demo text'>Explore more <i class="fa-solid fa-arrow-right"></i></Link>
+              </div>
+            </div>
+          </div>
         </>
     );
 }
