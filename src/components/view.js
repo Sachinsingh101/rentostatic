@@ -74,7 +74,7 @@ function View(){
                {
                 value.items?
                 <div className='col-md-6 shadow'>
-                 <img alt="Rento.com" src={`https://rento-com.onrender.com/public/${value.items.image}`} style={{width:"100%"}}></img>
+                 <img alt="Rento.com" src={`${value.imgurl}`} style={{width:"100%"}}></img>
                  <p>{value.items.housename}</p>
                  <p>{value.items.houseaddress}</p>
                  <p>{value.items.state}</p>

@@ -63,7 +63,7 @@ function Specificsearch(){
                 value.items.reverse().map((value,i)=>{
                   console.log(value);
                  return <div className='col-md-3 shadow mb-3'>
-                  <img alt="Rento.com" src={`https://rento-com.onrender.com/public/${value.image}`} style={{width:"100%"}}></img>
+                  <img alt="Rento.com" src={`${value.imgurl}`} style={{width:"100%"}}></img>
                   <p>{value.housename}</p>
                   <p>{value.houseaddress}</p>
                   <p>{value.state}</p>
